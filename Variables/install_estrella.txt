@@ -1,0 +1,46 @@
+How to Install Estrella Spectrometer Driver 
+(RUN AS ROOT OR USE ON ALL INSTRUCTIONS "SUDO")
+
+First get Estrella Driver from:
+	
+	https://github.com/shugaa/estrella.git
+	
+Next download libdll from:
+
+	http://github.com/bjoernr/libdll
+
+Next install cmake from:
+
+	http://www.cmake.org/
+	Using these commands on terminal in the folder: 
+	"./configure"
+	"./bootstrap && make && make install"
+	
+Then proceed to install libdll.so 
+
+	Following the instructions in the INSTALL.txt file
+	And run $ "/sbin/ldconfig -n /lib"
+	Then run $ "/sbin/ldconfig -v"
+	
+	
+Then proceed to install libusb 1.0.20 downloaded from:
+	
+	sudo apt-get install libusb-dev
+	
+Finally proceed to install libestrella.so
+
+	CFLAGS="-march=nocona -O2 -pipe -Wall -Werror" cmake [OPTS] /path/to/estrella/src/
+	with this flags:
+	-DCMAKE_INCLUDE_PATH:PATH=/usr/local/include/dll
+	-DCMAKE_LIBRARY_PATH:PATH=/usr/local/lib
+	Then follow by : make && make install
+	
+"Remember to have python numpy pandas scipy packages installed"
+
+With the command: 
+sudo apt-get install python-numpy python-matplotlib python-pandas
+
+To run the program:
+ 
+ 1.Change the paths of libraries on line 47 of estrella_python_controller.py
+ 2.Add all command to counts on line 67 of estrella_python_controller.py

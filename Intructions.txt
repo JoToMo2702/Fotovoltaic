@@ -1,0 +1,37 @@
+How to use the Programs.
+
+### IMPORTANT BEFORE USING ANY PROGRAM READ THIS SYMBOL
+
+# You must run the "make" downloaded from https://github.com/ArduCAM/RaspberryPi/tree/master/ArduCAM4Pi
+# if there is any problem on the compilation procees you must have:
+# sudo apt-get install wiringpi
+# sudo apt-get install i2c-tools
+# sudo apt-get install libi2c-dev
+# sudo apt-get install python-smbus
+
+- To take Pictures from the Arducam you have to run a .c  to do this,
+ just go to "/home/pi/DriverS/raspberrypi/ArduCAM4Pi" and ther is it.
+Execute in the shell the next command: "sudo ./ov2640_capture -c name.jpg 800x600
+You can manipulate the name and resolution (datasheet)
+
+# For this variables you must install python driver for ADS1115 from: https://github.com/adafruit/Adafruit_Python_ADS1x15
+# For this variables you must install python driver for SHT31-D from: https://github.com/ralf1070/Adafruit_Python_SHT31
+
+- To take Simple variables like irradiaton, temperature and humidity just run the file
+in "/home/pi/DriverS/Variables" TSS.py, and it will write a txt file with all information,
+just execute on shell the next command: "python TSS.py"
+
+# To run this algorithm you must have installed OpenCV and Sklearn libraries.
+
+- To make clouds analysis, you go to "/home/pi/DriverS/Clouds" and execute on the shell
+this command: python color.py --image /home/pi/DriverS/Clouds/Images/Test/cloud.jpg --clusters 10
+We suppose that the images to analyze are in that direction (direction after --image), so
+you could put images on that carpet or chage the direction to somewhere else, also you can
+change the number of cluster to analyze as you wish, but it has to be a positive number.
+The result image will be named "clouds.jpg" on this direction: "/home/pi/DriverS/Clouds/Images/Result"
+
+# To run this program you have to install all thing on the install_estrella tutorial, and
+# also compile a .ko file to install the drivers on the pi.
+
+- To use the Spectrometer just connect it, go to "/home/pi/DriverS/Spectrometer/estrella/python_controller"
+and run in the shell this command: "python estrella_python_controller.py"

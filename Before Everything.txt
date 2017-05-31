@@ -1,0 +1,8 @@
+You Musta have installed VNC viewer on your computer to acces to the raspberry pi.
+you have to use the the IP via ethernet "10.0.0.1"
+Username:pi
+Password:raspberry
+
+If you want to use a new pi, you must follow this tutorial 
+"https://www.raspberrypi.org/forums/viewtopic.php?f=99&t=74828" to configure your pi
+and let you use via ethernet.

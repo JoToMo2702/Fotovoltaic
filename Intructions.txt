@@ -1,6 +1,8 @@
 How to use the Programs.
 
 ### IMPORTANT BEFORE USING ANY PROGRAM READ THIS SYMBOL
+### Create a github clone to a direction of "home/pi/DriverS", if there is no
+### DriverS folder created, all programs will give an error of direction.
 
 # You must run the "make" downloaded from https://github.com/ArduCAM/RaspberryPi/tree/master/ArduCAM4Pi
 # if there is any problem on the compilation procees you must have:
@@ -30,8 +32,8 @@ you could put images on that carpet or chage the direction to somewhere else, al
 change the number of cluster to analyze as you wish, but it has to be a positive number.
 The result image will be named "clouds.jpg" on this direction: "/home/pi/DriverS/Clouds/Images/Result"
 
-# To run this program you have to install all thing on the install_estrella tutorial, and
-# also compile a .ko file to install the drivers on the pi.
+# To run this program you have to install all thing on the Install_Estrella tutorial in the 
+# Spectrometer folder, and also compile a .ko file to install the drivers on the pi.
 
 - To use the Spectrometer just connect it, go to "/home/pi/DriverS/Spectrometer/estrella/python_controller"
 and run in the shell this command: "python estrella_python_controller.py"

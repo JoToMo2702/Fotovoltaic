@@ -10,6 +10,8 @@ How to use the Programs.
 # sudo apt-get install i2c-tools
 # sudo apt-get install libi2c-dev
 # sudo apt-get install python-smbus
+# on the board, from left to the right seeing it in front, the pins are:
+# SCL,SDA,VCC,GND,SCLK, MISO, MOSI, CS.
 
 - To take Pictures from the Arducam you have to run a .c  to do this,
  just go to "/home/pi/DriverS/raspberrypi/ArduCAM4Pi" and ther is it.

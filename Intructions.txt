@@ -15,7 +15,7 @@ How to use the Programs.
 
 - To take Pictures from the Arducam you have to run a .c  to do this,
  just go to "/home/pi/DriverS/raspberrypi/ArduCAM4Pi" and ther is it.
-Execute in the shell the next command: "sudo ./ov2640_capture -c name.jpg 800x600
+Execute in the shell the next command: "sudo ./ov2640_capture -c name.jpg 800x600"
 You can manipulate the name and resolution (datasheet)
 
 # For this variables you must install python driver for ADS1115 from: https://github.com/adafruit/Adafruit_Python_ADS1x15
